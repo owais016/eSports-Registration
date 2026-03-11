@@ -211,7 +211,7 @@ body {
 
     opacity: 0;
     transform: translateY(60px);
-will-change: transform,opacity;
+will-change: transform, opacity;
     transition: transform 0.4s ease,
         opacity 0.4s ease,
         box-shadow 0.25s ease;
@@ -401,8 +401,7 @@ will-change: transform,opacity;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    transition: 0.2.
-        s;
+    transition: 0.2s;
 }
 
 .sponsor-box:hover {
@@ -410,3 +409,4 @@ will-change: transform,opacity;
     box-shadow: 0 0 20px rgba(255, 47, 109, 0.5);
 
 }
+
