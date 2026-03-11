@@ -1,21 +1,20 @@
-
 // ELEMENT REFERENCES
 
 const navbar = document.querySelector(".navbar");
-const revealElements = document.querySelectorAll(".game-card, .event-details, .process, .sponsors");const toggle = document.getElementById("menu-toggle");
+const revealElements = document.querySelectorAll(".game-card, .event-details, .process, .sponsors");
+const toggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
 
 // SCROLL REVEAL ANIMATION
 
-
 function revealOnScroll() {
 
     const triggerPoint = window.innerHeight * 0.85;
 
-    cards.forEach(el => {
+    revealElements.forEach(el => {
 
-        const cardTop = card.getBoundingClientRect().top;
+        const cardTop = el.getBoundingClientRect().top;
 
         if (cardTop < triggerPoint) {
             el.classList.add("show");
@@ -27,9 +26,7 @@ function revealOnScroll() {
 }
 
 
-
 // NAVBAR SCROLL EFFECT
-
 
 function navbarEffect() {
 
@@ -48,48 +45,36 @@ function navbarEffect() {
 }
 
 
-
 // MOBILE MENU TOGGLE
-
 
 toggle.addEventListener("click", (e) => {
 
     e.stopPropagation();
-
     navLinks.classList.toggle("active");
 
 });
 
 
-
 // CLOSE MENU WHEN CLICK OUTSIDE
-
 
 document.addEventListener("click", (e) => {
 
     if (!navLinks.contains(e.target) && !toggle.contains(e.target)) {
-
         navLinks.classList.remove("active");
-
     }
 
 });
 
 
-
 // CLOSE MENU WHEN LINK CLICKED
-
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
     link.addEventListener("click", () => {
-
         navLinks.classList.remove("active");
-
     });
 
 });
-
 
 
 // SCROLL EVENT LISTENER
@@ -102,14 +87,11 @@ window.addEventListener("scroll", () => {
 });
 
 
-
 // INITIAL LOAD
-
 
 window.addEventListener("load", () => {
 
     revealOnScroll();
     navbarEffect();
-
 
 });
