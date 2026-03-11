@@ -1,10 +1,8 @@
-// ==============================
+
 // ELEMENT REFERENCES
-// ==============================
 
 const navbar = document.querySelector(".navbar");
-const cards = document.querySelectorAll(".game-card");
-const toggle = document.getElementById("menu-toggle");
+const revealElements = document.querySelectorAll(".game-card, .event-details, .process, .sponsors");const toggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
 
@@ -15,14 +13,14 @@ function revealOnScroll() {
 
     const triggerPoint = window.innerHeight * 0.85;
 
-    cards.forEach(card => {
+    cards.forEach(el => {
 
         const cardTop = card.getBoundingClientRect().top;
 
         if (cardTop < triggerPoint) {
-            card.classList.add("show");
+            el.classList.add("show");
         } else {
-            card.classList.remove("show");
+            el.classList.remove("show");
         }
 
     });
@@ -112,5 +110,6 @@ window.addEventListener("load", () => {
 
     revealOnScroll();
     navbarEffect();
+
 
 });
