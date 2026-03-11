@@ -410,3 +410,17 @@ will-change: transform, opacity;
 
 }
 
+.event-details,
+.process,
+.sponsors {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.5s ease;
+}
+
+.event-details.show,
+.process.show,
+.sponsors.show {
+    opacity: 1;
+    transform: translateY(0);
+}
